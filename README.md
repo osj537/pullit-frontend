@@ -2,7 +2,6 @@
 
 > OCR 엔진을 통한 효율적인 문제 등록과 자동 출제 시스템을 바탕으로, 교육 현장의 업무 생산성을 혁신하는 문제은행 플랫폼
 
-![서비스 메인 화면 스크린샷 삽입 위치]
 
 [![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white)](https://java.com)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
@@ -122,22 +121,6 @@ Chart.js 차트를 PDF로 변환 시 해상도가 낮아 데이터가 흐릿하�
 
 ---
 
-## 🚀 실행 방법
-
-```bash
-# 백엔드
-git clone https://github.com/ProblematicDevelopers/pullit-backend
-cd pullit-backend
-./gradlew bootRun
-
-# 프론트엔드
-git clone https://github.com/ProblematicDevelopers/pullit-frontend
-cd pullit-frontend
-npm install
-npm run serve
-```
-
----
 
 ## 🎬 데모 영상
 
@@ -154,4 +137,3 @@ npm run serve
 ---
 
 > 이 README는 본인 기여 범위를 중심으로 작성되었습니다.
-> 스크린샷은 실제 서비스 화면으로 교체해 주세요.
