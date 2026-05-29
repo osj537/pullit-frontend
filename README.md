@@ -45,16 +45,16 @@ OCR로 문항을 디지털 자산화하고, 과목·단원·난이도 기반 자
 
 ## 👤 본인 기여 (오상진)
 
-| 분류 | 담당 내용 |
-|------|-----------|
-| **시험 관리 페이지** | 진행중/완료된 시험 리스트 조회, 과목 코드 → 한글 과목명 변환, 과목별 필터링 탭 구성 |
-| **시험 결과 리포트** | `attempt_id` 기반 응시 기록 조회, 시험지·정답·사용자 답변 데이터 출력 |
-| **문항 상세 조회** | `question_id` 기반 문항 상세보기, 기본/상세 리포트 공통 모달 컴포넌트 설계 |
-| **수식 렌더링** | KaTeX 연동 + 정규식 기반 파싱으로 수학 기호·수식 웹 환경에서 정확 출력 |
-| **데이터 시각화** | Chart.js 기반 성취도 분석 차트, API 데이터 → Vue 반응형 → Chart 데이터 변환 파이프라인 구성 |
-| **렌더링 최적화** | `watch` + 디바운싱 적용으로 불필요한 차트 렌더링 최소화 |
-| **PDF 리포트** | `html2canvas` + `jsPDF` 기반 상세 리포트 PDF 생성, 차트 이미지 변환 삽입으로 품질 보완 |
-| **PDF UX** | 파일명 자동 생성 및 스타일 최적화, 비동기 다운로드로 속도 약 30% 향상 |
+| 분류 | 담당 내용 | 주요 파일 |
+|------|-----------|-----------|
+| **시험 관리 페이지** | 진행중/완료된 시험 리스트 조회, 과목 코드 → 한글 과목명 변환, 과목별 필터링 탭 구성 | `src/components/student/report/ReportList.vue`<br>`src/services/examApi.js`<br>`src/services/userExamApi.js` |
+| **시험 결과 리포트** | `attempt_id` 기반 응시 기록 조회, 시험지·정답·사용자 답변 데이터 출력 | `src/components/student/report/DetailReport.vue`<br>`src/components/student/report/BasicReport.vue`<br>`src/services/reportApi.js` |
+| **문항 상세 조회** | `question_id` 기반 문항 상세보기, 기본/상세 리포트 공통 모달 컴포넌트 설계 | `src/components/student/report/QuestionHtmlModal.vue`<br>`src/services/itemApi.js` |
+| **수식 렌더링** | KaTeX 연동 + 정규식 기반 파싱으로 수학 기호·수식 웹 환경에서 정확 출력 | `src/composables/useMathJax.js`<br>`src/composables/useMathJaxOptimized.js`<br>`src/directives/mathJaxDirective.js`<br>`src/utils/mathjax.js` |
+| **데이터 시각화** | Chart.js 기반 성취도 분석 차트, API 데이터 → Vue 반응형 → Chart 데이터 변환 파이프라인 구성 | `src/components/student/report/ChartComponent.vue`<br>`src/components/student/report/MultiDatasetChartComponent.vue` |
+| **렌더링 최적화** | `watch` + 디바운싱 적용으로 불필요한 차트 렌더링 최소화 | `src/components/student/report/DetailReport.vue` |
+| **PDF 리포트** | `html2canvas` + `jsPDF` 기반 상세 리포트 PDF 생성, 차트 이미지 변환 삽입으로 품질 보완 | `src/services/detailReportPdfService.js`<br>`src/services/simpleDetailReportPdfService.js`<br>`src/utils/htmlToPdfConverter.js`<br>`src/utils/pdftemplates/detailReportTemplate.js` |
+| **PDF UX** | 파일명 자동 생성 및 스타일 최적화, 비동기 다운로드로 속도 약 30% 향상 | `src/services/detailReportPdfService.js` |
 
 ---
 
